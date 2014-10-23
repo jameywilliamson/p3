@@ -1,17 +1,52 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
+
 
 Route::get('/', function()
 {
-	return View::make('hello');
+
+    return View::make('p3');
+
 });
+
+
+//route for ipsum page
+Route::get('/ipsum/', function()
+{
+
+    echo 'Please enter how many paragrahs you would like generated<br>' ;
+    return 'place holder';
+});
+
+//route for number of paragraphs
+Route::get('/ipsum/{paragraphcount}', function()
+{
+
+    return 'Good to go';
+});
+
+
+//route for user generator
+Route::get('/user/', function()
+{
+
+    return 'Please enter how many paragrahs you would like generated';
+});
+
+
+//route for number of users generated
+Route::get('/user/{usercount}', function()
+{
+
+    return 'Good to go';
+});
+
+
+
+
+
+
+
+
+
+
