@@ -14,13 +14,13 @@
     of random words (such as latin or funny text) that doesn't make sense. This will make your customers focus on
     what the webpage looks like rather than what the text says.
 </p>
-<a href="/ipsum">Click here to access the lorem ipsum generator</a>
+<a href="p3/app/views/ipsum">Click here to access the lorem ipsum generator</a>
 
 <p>
     The tool at your disposal is the random user generator. This tool will create random users for you so you can
     populate fake user accounts to test your website.
 </p>
-<a href="/user">Click here to access the user generator</a>
+<a href="p3/app/views//user">Click here to access the user generator</a>
 
 </div>
 
