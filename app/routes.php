@@ -23,30 +23,30 @@ Route::get('ipsum/{paraCount?}', function()
 
 });
 
-
-//route for user generator
-Route::get('/user/', function()
-{
-
-    return View::make('user');
-});
-
-
 //route for number of users generated
-Route::get('/user/{usercount}', function()
+Route::get('/user/{usercount?}', function()
 {
+
+    //grabs the value from /user view
+    $ucount = Input::get('ucount');
+    $address = Input::get('address');
+
+    $faker = Faker\Factory::create();
+    for ($i=0; $i < $ucount; $i++)
+    {
+        echo $faker->name, "\n<br>";
+
+        if ($address)
+        {
+           echo $faker->address . '<br><br />';
+        }
+    }
+
 
     return View::make('user');
 });
 
 
-//Route::get('/ipsum/', function()
-//{
-
-
-
-
-  //  return View::make('ipsum');
 
 
 
