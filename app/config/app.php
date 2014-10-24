@@ -170,6 +170,7 @@ return array(
 		'Input'           => 'Illuminate\Support\Facades\Input',
 		'Lang'            => 'Illuminate\Support\Facades\Lang',
 		'Log'             => 'Illuminate\Support\Facades\Log',
+        'LoremGenerator'  =>'Badcow\LoremIpsum\Generator',
 		'Mail'            => 'Illuminate\Support\Facades\Mail',
 		'Paginator'       => 'Illuminate\Support\Facades\Paginator',
 		'Password'        => 'Illuminate\Support\Facades\Password',

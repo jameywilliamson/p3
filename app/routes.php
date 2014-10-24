@@ -9,20 +9,18 @@ Route::get('/', function()
 
 });
 
-
-//route for ipsum page
-Route::get('/ipsum/', function()
+Route::get('ipsum/{paraCount?}', function()
 {
+   $pcount = Input::get('pcount');
 
-    echo 'Please enter how many paragrahs you would like generated<br>' ;
-    return 'place holder';
-});
+    $generator = new LoremGenerator();
+    $paragraphs = $generator->getParagraphs($pcount);
+    echo '<h2>Your text:<br></h2>';
+    echo implode('<p>', $paragraphs);
 
-//route for number of paragraphs
-Route::get('/ipsum/{paragraphcount}', function()
-{
+    return View::make('ipsum');
 
-    return 'Good to go';
+
 });
 
 
@@ -30,7 +28,7 @@ Route::get('/ipsum/{paragraphcount}', function()
 Route::get('/user/', function()
 {
 
-    return 'Please enter how many paragrahs you would like generated';
+    return View::make('user');
 });
 
 
@@ -38,10 +36,17 @@ Route::get('/user/', function()
 Route::get('/user/{usercount}', function()
 {
 
-    return 'Good to go';
+    return View::make('user');
 });
 
 
+//Route::get('/ipsum/', function()
+//{
+
+
+
+
+  //  return View::make('ipsum');
 
 
 
